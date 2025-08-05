@@ -72,4 +72,22 @@ filename,EPS
 * EPS values are rounded to 2 decimal places
 * All 50 files were processed
 
+## Why some EPS values were not extracted
+
+Not every EPS value gets picked up by the script, and that’s expected. This is a quick summary of why:
+
+1. **HTML formats vary a lot**  
+   Every filing looks different. Some use clean tables, others have messy inline text or custom layouts. The script handles common patterns, but it’s not built to cover every possible format.
+
+2. **Non-GAAP and adjusted EPS are skipped**  
+   If the label includes words like “adjusted”, “non-GAAP”, “core”, or “excluding”, it’s skipped on purpose. The goal is to only extract clear GAAP-compliant values like “Basic” or “Diluted EPS”.
+
+3. **EPS hidden in footnotes or narratives**  
+   Some filings mention EPS only once, deep inside a paragraph or a footnote. The script doesn’t dig that deep to avoid pulling noisy or irrelevant text.
+
+4. **Value filters**  
+   The script ignores values above 100, or above 20 if the label isn’t something like “GAAP” or “Basic”. This helps avoid pulling totals or misread numbers.
+
+In short — this script is written to be cautious and only pull clearly labeled, reliable EPS values. It’s okay if a few edge cases are missed. That’s by design.
+
 ```
