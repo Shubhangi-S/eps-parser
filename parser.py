@@ -102,7 +102,7 @@ def write_to_csv(rows, output_csv):
 # Entry point
 if __name__ == '__main__':
     if len(sys.argv) != 3:
-        print("Usage: python parser_1.py <input_dir> <output_csv>")
+        print("Usage: python parser.py <input_dir> <output_csv>")
         sys.exit(1)
 
     input_dir = sys.argv[1]

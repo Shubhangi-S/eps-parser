@@ -8,7 +8,7 @@ This script extracts Earnings Per Share (EPS) values from a set of SEC 8-K HTML 
 
 ## Files
 
-- `parser_1.py` – main script  
+- `parser.py` – main script  
 - `output.csv` – extracted EPS values  
 - `README.md` – instructions and notes  
 
@@ -27,7 +27,7 @@ pip install beautifulsoup4
 ### Run the script
 
 ```bash
-python3 parser_1.py /path/to/Training_Filings output.csv
+python3 parser.py /path/to/Training_Filings output.csv
 ```
 
 Replace `/path/to/Training_Filings` with the folder containing the 50 HTML files.
