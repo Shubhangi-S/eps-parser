@@ -1,5 +1,5 @@
 ````markdown
-# EPS Parser – Trexquant Take-Home
+# EPS Parser – Take-Home
 
 ## Overview
 
