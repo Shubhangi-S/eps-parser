@@ -48,11 +48,17 @@ Replace `/path/to/Training_Filings` with the folder containing the 50 HTML files
 * Filters out EPS values that are too high unless clearly labeled as GAAP or Basic
 
 
-## Limitations
+## Known Limitations
 
-* Some adjusted EPS values may be included if not clearly labeled
-* Some GAAP EPS may be missed due to inconsistent formatting
-* EPS values above 20 are skipped unless the label includes GAAP, Basic, or Diluted
+- Does not handle multi-period EPS tables (e.g., quarterly vs annual in same row)
+- Doesn't extract EPS if it's deeply embedded in narrative or non-standard tags
+- Currently focuses only on GAAP/basic EPS and intentionally skips adjusted numbers
+
+## Possible Improvements
+
+- Add support for logging skipped lines with reasons
+- Extend table parsing to handle 2D or complex header structures
+- Include CLI flags or config file to tweak filters
 
 
 ## Output Example
